@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-
+from .models import *
 
 # Create your views here.
 def admin():
@@ -8,7 +8,8 @@ def admin():
 
 
 def home(request):
-    return render(request , 'home.html')
+    img = Image.objects.all()
+    return render(request , 'home.html',{'imgs':img})
 
 
 def about(request):
