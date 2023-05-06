@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -154,3 +155,18 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# django-storages 
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+#  aws img 
+AWS_ACCESS_KEY_ID = 'AKIAYDP4OL2QYQC4ZVM4'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'render-new'
+
+# AWS_S3_SIGNATURE_NAME = 's3v4',
+# AWS_S3_REGION_NAME = 'us-east-1'
+# AWS_S3_FILE_OVERWRITE = False
+# AWS_DEFAULT_ACL =  None
+# AWS_S3_VERITY = True
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
