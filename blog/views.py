@@ -9,7 +9,9 @@ def admin():
 
 def home(request):
     img = Image.objects.all()
-    return render(request , 'home.html',{'imgs':img})
+    posts = Post.objects.all()
+    context = {'imgs':img , 'posts':posts}
+    return render(request , 'home.html',context)
 
 
 def about(request):

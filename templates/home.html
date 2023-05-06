@@ -4,17 +4,38 @@
 {% block body %}
 <br>
 
-<h1>home</h1>
+<h1 class="card-title text-center mb-4">home</h1>
 
 
-{% for image in imgs %}
+<div class="row">
+    {% for image in imgs %}
+    <div class="col-md-4 ">
+        <div class="card "  >
+            <img src="{{ image.image.url }}" class="card-img-top " style="height:30rem;" alt="">
+        </div>
+    </div>
+    {% endfor %}
+</div>
 
-    <img src="{{ image.image.url }}" alt="">
+<hr>
 
-    {% empty %}
-<h1>No images found.</h1>
-{% endfor %}
+<div class="row">
+    {% for post in posts %}
+    <div class="col-md-4 mt-5 mb-5">
+        <div class="card "  >
+           <h1 class="card-title text-center">{{post.title}}</h1>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
 
 
 {% endblock %}
+
+
   
+
+
+
